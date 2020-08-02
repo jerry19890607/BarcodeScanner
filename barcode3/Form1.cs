@@ -93,6 +93,8 @@ namespace barcode3
                     textBox2.Enabled = false;
                     textBox1.Enabled = false;
                     comboBox1.Enabled = false;
+                    this.ActiveControl = button3;
+                    button3.Focus();
                 }
                 textBox3.ReadOnly = false;
                 textBox3.Enabled = false;
@@ -107,7 +109,6 @@ namespace barcode3
                 textBox3.Enabled = true;
                 textBox3.ReadOnly = false;
                 textBox3.Focus();
-
                 textBox2.ReadOnly = true;
                 textBox2.Enabled = false;
             }
@@ -212,6 +213,6 @@ namespace barcode3
                 button1_Click(null, null);
             }
         }
-        
+
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Google driver\\條碼\\barcode3\\barcode3\\barcode3.csproj": {}
+    "D:\\Google driver\\條碼\\BarcodeScanner-master\\barcode3\\barcode3.csproj": {}
   },
   "projects": {
-    "D:\\Google driver\\條碼\\barcode3\\barcode3\\barcode3.csproj": {
+    "D:\\Google driver\\條碼\\BarcodeScanner-master\\barcode3\\barcode3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Google driver\\條碼\\barcode3\\barcode3\\barcode3.csproj",
+        "projectUniqueName": "D:\\Google driver\\條碼\\BarcodeScanner-master\\barcode3\\barcode3.csproj",
         "projectName": "ThalesBarcodeScanner",
-        "projectPath": "D:\\Google driver\\條碼\\barcode3\\barcode3\\barcode3.csproj",
+        "projectPath": "D:\\Google driver\\條碼\\BarcodeScanner-master\\barcode3\\barcode3.csproj",
         "packagesPath": "C:\\Users\\jerry-I5\\.nuget\\packages\\",
-        "outputPath": "D:\\Google driver\\條碼\\barcode3\\barcode3\\obj\\",
+        "outputPath": "D:\\Google driver\\條碼\\BarcodeScanner-master\\barcode3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jerry-I5\\AppData\\Roaming\\NuGet\\NuGet.Config",
