@@ -1,0 +1,15 @@
+D:\Google driver\條碼\barcode3\barcode3\obj\Release\netcoreapp3.1\barcode3.csprojAssemblyReference.cache
+D:\Google driver\條碼\barcode3\barcode3\obj\Release\netcoreapp3.1\barcode3.Form1.resources
+D:\Google driver\條碼\barcode3\barcode3\obj\Release\netcoreapp3.1\barcode3.csproj.GenerateResource.cache
+D:\Google driver\條碼\barcode3\barcode3\obj\Release\netcoreapp3.1\barcode3.AssemblyInfoInputs.cache
+D:\Google driver\條碼\barcode3\barcode3\obj\Release\netcoreapp3.1\barcode3.AssemblyInfo.cs
+D:\Google driver\條碼\barcode3\barcode3\obj\Release\netcoreapp3.1\barcode3.csproj.CoreCompileInputs.cache
+D:\Google driver\條碼\barcode3\barcode3\obj\Release\netcoreapp3.1\barcode3.genruntimeconfig.cache
+D:\Google driver\條碼\barcode3\barcode3\bin\Release\netcoreapp3.1\ThalesBarcodeScanner.exe
+D:\Google driver\條碼\barcode3\barcode3\bin\Release\netcoreapp3.1\ThalesBarcodeScanner.deps.json
+D:\Google driver\條碼\barcode3\barcode3\bin\Release\netcoreapp3.1\ThalesBarcodeScanner.runtimeconfig.json
+D:\Google driver\條碼\barcode3\barcode3\bin\Release\netcoreapp3.1\ThalesBarcodeScanner.runtimeconfig.dev.json
+D:\Google driver\條碼\barcode3\barcode3\bin\Release\netcoreapp3.1\ThalesBarcodeScanner.dll
+D:\Google driver\條碼\barcode3\barcode3\bin\Release\netcoreapp3.1\ThalesBarcodeScanner.pdb
+D:\Google driver\條碼\barcode3\barcode3\obj\Release\netcoreapp3.1\ThalesBarcodeScanner.dll
+D:\Google driver\條碼\barcode3\barcode3\obj\Release\netcoreapp3.1\ThalesBarcodeScanner.pdb

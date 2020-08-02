@@ -1,0 +1,15 @@
+D:\Google driver\條碼\barcode3\barcode3\bin\Debug\netcoreapp3.1\barcode3.exe
+D:\Google driver\條碼\barcode3\barcode3\bin\Debug\netcoreapp3.1\barcode3.deps.json
+D:\Google driver\條碼\barcode3\barcode3\bin\Debug\netcoreapp3.1\barcode3.runtimeconfig.json
+D:\Google driver\條碼\barcode3\barcode3\bin\Debug\netcoreapp3.1\barcode3.runtimeconfig.dev.json
+D:\Google driver\條碼\barcode3\barcode3\bin\Debug\netcoreapp3.1\barcode3.dll
+D:\Google driver\條碼\barcode3\barcode3\bin\Debug\netcoreapp3.1\barcode3.pdb
+D:\Google driver\條碼\barcode3\barcode3\obj\Debug\netcoreapp3.1\barcode3.csprojAssemblyReference.cache
+D:\Google driver\條碼\barcode3\barcode3\obj\Debug\netcoreapp3.1\barcode3.Form1.resources
+D:\Google driver\條碼\barcode3\barcode3\obj\Debug\netcoreapp3.1\barcode3.csproj.GenerateResource.cache
+D:\Google driver\條碼\barcode3\barcode3\obj\Debug\netcoreapp3.1\barcode3.AssemblyInfoInputs.cache
+D:\Google driver\條碼\barcode3\barcode3\obj\Debug\netcoreapp3.1\barcode3.AssemblyInfo.cs
+D:\Google driver\條碼\barcode3\barcode3\obj\Debug\netcoreapp3.1\barcode3.csproj.CoreCompileInputs.cache
+D:\Google driver\條碼\barcode3\barcode3\obj\Debug\netcoreapp3.1\barcode3.dll
+D:\Google driver\條碼\barcode3\barcode3\obj\Debug\netcoreapp3.1\barcode3.pdb
+D:\Google driver\條碼\barcode3\barcode3\obj\Debug\netcoreapp3.1\barcode3.genruntimeconfig.cache
