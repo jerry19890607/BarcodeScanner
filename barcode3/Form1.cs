@@ -13,14 +13,17 @@ namespace barcode3
 {
     public partial class Form1 : Form
     {
+        string logFilePath = "D:\\Sample.txt";
+
         public Form1()
         {
-            InitializeComponent();            
+            InitializeComponent();        
         }
 
         private void Form1_Shown(object sender, EventArgs e)
         {
             textBox1.Focus();
+            pathBox.Text = logFilePath;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -34,8 +37,8 @@ namespace barcode3
             }
             else {
                 DateTimeOffset now = (DateTimeOffset)DateTime.UtcNow;
-                string a = textBox2.Text;
-                string b = textBox3.Text;
+                string a = textBox2.Text.Replace(" ", "");
+                string b = textBox3.Text.Replace(" ", "");
 
                 label11.Visible = false;
                 label12.Visible = false;
@@ -51,17 +54,24 @@ namespace barcode3
                     BackColor = Color.Salmon;
                 }
 
-                String line;
+                logFilePath = pathBox.Text;
+                if (!File.Exists(logFilePath))
+                {
+                    StreamWriter sw = File.CreateText(logFilePath);
+                    sw.Close();
+                }
+
                 try
                 {
-                    StreamReader sr = new StreamReader("D:\\Download\\Sample.txt");
+                    String line;
+                    StreamReader sr = new StreamReader(logFilePath);
                     line = sr.ReadToEnd();
                     sr.Close();
 
                     //Pass the filepath and filename to the StreamWriter Constructor
-                    StreamWriter sw = new StreamWriter("D:\\Download\\Sample.txt");
+                    StreamWriter sw = new StreamWriter(logFilePath);
                     //Write a line of text
-                    sw.WriteLine(line + now.ToLocalTime().ToString() + " " + textBox1.Text + " " + comboBox1.Text + " " + textBox2.Text + " " + textBox3.Text + " " + label1.Text);
+                    sw.WriteLine(line + now.ToLocalTime().ToString() + ";" + textBox1.Text + ";" + comboBox1.Text.Replace(" ", "") + ";" + textBox2.Text + ";" + textBox3.Text + ";" + label1.Text);
                     //Close the file
                     sw.Close();
                 }
@@ -94,46 +104,12 @@ namespace barcode3
                     textBox1.Enabled = false;
                     comboBox1.Enabled = false;
                     this.ActiveControl = button3;
-                    button3.Focus();
+                    //button3.Focus();
                 }
                 textBox3.ReadOnly = false;
                 textBox3.Enabled = false;
             }
 
-        }
-
-        private void textBox2_KeyUp(object sender, KeyEventArgs e)
-        {
-            if ( (e.KeyValue == (char)Keys.Return) )
-            {
-                textBox3.Enabled = true;
-                textBox3.ReadOnly = false;
-                textBox3.Focus();
-                textBox2.ReadOnly = true;
-                textBox2.Enabled = false;
-            }
-        }
-
-        private void textBox3_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyValue == (char)Keys.Return)
-            {
-                label5.Text = "";
-
-                if (textBox2.Text == textBox3.Text)
-                {
-                    label5.Visible = true;
-                    label5.Text = "Input 2 Error, Duplicate!";
-                    textBox3.Clear();
-                }
-                else
-                {
-                    button1_Click(null, null);
-                    textBox2.Focus();
-                    textBox3.ReadOnly = true;
-                    label5.Text = "";
-                }
-            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -169,6 +145,7 @@ namespace barcode3
             textBox1.Enabled = true;
             comboBox1.Enabled = true;
             textBox3.Enabled = false;
+            label13.Visible = false;
         }
 
         private void textBox4_KeyUp(object sender, KeyEventArgs e)
@@ -214,5 +191,75 @@ namespace barcode3
             }
         }
 
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar == (char)Keys.Return))
+            {
+                if (string.IsNullOrWhiteSpace(textBox2.Text))
+                {
+                    label13.Visible = true;
+                    label13.Text = "Input 1 can't be empty!";
+                }
+                else
+                {
+                    label13.Visible = false;
+                    textBox3.Enabled = true;
+                    textBox3.ReadOnly = false;
+                    textBox3.Focus();
+                    textBox2.ReadOnly = true;
+                    textBox2.Enabled = false;
+                }
+            }
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                if (string.IsNullOrWhiteSpace(textBox3.Text))
+                {
+                    label5.Visible = true;
+                    label5.Text = "Input 2 can't be empty!";
+                }
+                else
+                {
+                    label5.Text = "";
+                    if (textBox2.Text == textBox3.Text)
+                    {
+                        label5.Visible = true;
+                        label5.Text = "Input 2 Error, Duplicate!";
+                        textBox3.Clear();
+                    }
+                    else
+                    {
+                        button1_Click(null, null);
+                        textBox2.Focus();
+                        textBox3.ReadOnly = true;
+                        label5.Text = "";
+                    }
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Title = "Select log file";
+            dialog.InitialDirectory = "C:\\";
+            dialog.Filter = "txt files (*.*)|*.txt";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                logFilePath = dialog.FileName;
+                pathBox.Text = logFilePath;
+            }
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            label15.AutoSize = false;
+            label15.Height = 3;
+            label15.Width = 868;
+            label15.BorderStyle = BorderStyle.Fixed3D;
+        }
     }
 }

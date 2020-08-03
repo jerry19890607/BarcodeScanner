@@ -1,0 +1,15 @@
+C:\GIT\BarcodeScanner\barcode3\bin\Release\netcoreapp3.1\ThalesBarcodeScanner.exe
+C:\GIT\BarcodeScanner\barcode3\bin\Release\netcoreapp3.1\ThalesBarcodeScanner.deps.json
+C:\GIT\BarcodeScanner\barcode3\bin\Release\netcoreapp3.1\ThalesBarcodeScanner.runtimeconfig.json
+C:\GIT\BarcodeScanner\barcode3\bin\Release\netcoreapp3.1\ThalesBarcodeScanner.runtimeconfig.dev.json
+C:\GIT\BarcodeScanner\barcode3\bin\Release\netcoreapp3.1\ThalesBarcodeScanner.dll
+C:\GIT\BarcodeScanner\barcode3\bin\Release\netcoreapp3.1\ThalesBarcodeScanner.pdb
+C:\GIT\BarcodeScanner\barcode3\obj\Release\netcoreapp3.1\BarcodeCompare.csprojAssemblyReference.cache
+C:\GIT\BarcodeScanner\barcode3\obj\Release\netcoreapp3.1\barcode3.Form1.resources
+C:\GIT\BarcodeScanner\barcode3\obj\Release\netcoreapp3.1\BarcodeCompare.csproj.GenerateResource.cache
+C:\GIT\BarcodeScanner\barcode3\obj\Release\netcoreapp3.1\BarcodeCompare.AssemblyInfoInputs.cache
+C:\GIT\BarcodeScanner\barcode3\obj\Release\netcoreapp3.1\BarcodeCompare.AssemblyInfo.cs
+C:\GIT\BarcodeScanner\barcode3\obj\Release\netcoreapp3.1\BarcodeCompare.csproj.CoreCompileInputs.cache
+C:\GIT\BarcodeScanner\barcode3\obj\Release\netcoreapp3.1\ThalesBarcodeScanner.dll
+C:\GIT\BarcodeScanner\barcode3\obj\Release\netcoreapp3.1\ThalesBarcodeScanner.pdb
+C:\GIT\BarcodeScanner\barcode3\obj\Release\netcoreapp3.1\BarcodeCompare.genruntimeconfig.cache

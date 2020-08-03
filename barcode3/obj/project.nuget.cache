@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZzmC45+WzIlzQbqxPW3zggEK/edlgZ6X3uKEhYGz20Zj5qc0CjZEaMuEvLC4awX7lrrytDjXAqMudjf9tedI2w==",
+  "dgSpecHash": "yDd1rm9XItJjl2TQ8PBe0NiAveCtinjbnR4Pk+mi46v5iKtLkzfA/P+oRZJjGA8C3GFgOof96l1a2olLId96iA==",
   "success": true,
-  "projectFilePath": "D:\\Google driver\\條碼\\BarcodeScanner-master\\barcode3\\barcode3.csproj",
+  "projectFilePath": "C:\\GIT\\BarcodeScanner\\barcode3\\BarcodeCompare.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

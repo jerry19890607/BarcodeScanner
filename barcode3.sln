@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "barcode3", "barcode3\barcode3.csproj", "{D8D134C0-21F7-4231-81FC-6475D781C40F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BarcodeCompare", "barcode3\BarcodeCompare.csproj", "{D8D134C0-21F7-4231-81FC-6475D781C40F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
