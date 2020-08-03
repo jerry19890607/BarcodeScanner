@@ -13,7 +13,7 @@ namespace barcode3
 {
     public partial class Form1 : Form
     {
-        string logFilePath = "D:\\Sample.txt";
+        string logFilePath = "D:\\BarcodeLogFile.txt";
 
         public Form1()
         {
