@@ -8,13 +8,10 @@
 # Pre-processing:
  - Need Windows .NET framework 3.1 installed
 
-# Example:
- - Output true
-![Correct 2D compare](./image/sample_true.jpg)
- - Output false
-![Incorrect 2D compare](./image/sample_false.jpg)
-
 # Release:
+    - v1.0.2
+        1. Clear text box if input is empty
+        2. Implement txt export to Excel feature        
     - v1.0.1
         1. Fix input null string bug
         2. Window re-size locked
@@ -22,6 +19,11 @@
         4. Implement log browser function
         5. Log file separate by ";"
         6. Enhancement of reset by space or enter key
-
     - v1.0.0
         * Init version
+        
+# Example:
+ - Output true
+![Correct 2D compare](./image/sample_true.jpg)
+ - Output false
+![Incorrect 2D compare](./image/sample_false.jpg)
