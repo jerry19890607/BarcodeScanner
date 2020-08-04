@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using NPOI.HSSF.UserModel;
+using NPOI.SS.UserModel;
+
 namespace barcode3
 {
     public partial class Form1 : Form
@@ -55,6 +58,14 @@ namespace barcode3
                 }
 
                 logFilePath = pathBox.Text;
+                /*
+                bool exists = System.IO.Directory.Exists(logFilePath);
+
+                if (!exists)
+                {
+                    System.IO.Directory.CreateDirectory(logFilePath);
+                }*/
+
                 if (!File.Exists(logFilePath))
                 {
                     StreamWriter sw = File.CreateText(logFilePath);
@@ -71,7 +82,7 @@ namespace barcode3
                     //Pass the filepath and filename to the StreamWriter Constructor
                     StreamWriter sw = new StreamWriter(logFilePath);
                     //Write a line of text
-                    sw.WriteLine(line + now.ToLocalTime().ToString() + ";" + textBox1.Text + ";" + comboBox1.Text.Replace(" ", "") + ";" + input1.Text + ";" + input2.Text + ";" + label1.Text);
+                    sw.WriteLine(line + now.ToLocalTime().ToString() + "," + textBox1.Text + "," + comboBox1.Text.Replace(" ", "") + "," + input1.Text + "," + input2.Text + "," + label1.Text);
                     //Close the file
                     sw.Close();
                 }
@@ -147,6 +158,8 @@ namespace barcode3
             comboBox1.Enabled = true;
             input2.Enabled = false;
             label13.Visible = false;
+            exportlabel.Text = "";
+            exportlabel.Visible = false;
         }
 
         private void textBox4_KeyUp(object sender, KeyEventArgs e)
@@ -262,7 +275,51 @@ namespace barcode3
             label15.AutoSize = false;
             label15.Height = 3;
             label15.Width = 868;
-            label15.BorderStyle = BorderStyle.Fixed3D;
+            label15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+        }
+
+        private void exCxcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string txtFullPath;
+                string excelFullPath;
+                exportlabel.Text = "Waiting for txt export to Excel...";
+                exportlabel.Visible = true;
+                txtFullPath = logFilePath;
+
+                excelFullPath = txtFullPath.Replace("txt", "xls");
+                txt2excel(txtFullPath, excelFullPath);
+
+                exportlabel.Text = "Export to " + excelFullPath + " ready!";
+                button3.Focus();
+            }
+            catch (Exception error)
+            {
+                exportlabel.Text = "Something wrong! Error: " + error.Message;
+            }
+        }
+
+        public static void txt2excel(string txtFullPath, string excelFullPath)
+        {
+            HSSFWorkbook hssfworkbook = new HSSFWorkbook();
+            ISheet sheet = hssfworkbook.CreateSheet("sheet1");
+            string[] txtLines = File.ReadAllLines(txtFullPath);
+            for (int i = 0; i < txtLines.Length; ++i)
+            {
+                    string[] line = txtLines[i].Split(',');
+                    IRow dataRow = sheet.CreateRow(i);
+                    for (int j = 0; j < line.Length; j++)
+                    {
+                        ICell cell = dataRow.CreateCell(j);
+                        cell.SetCellValue(line[j]);
+                    }
+            }
+
+            using (FileStream fs = File.OpenWrite(excelFullPath))
+            {
+                hssfworkbook.Write(fs);
+            }
         }
     }
 }

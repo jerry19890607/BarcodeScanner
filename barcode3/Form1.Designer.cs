@@ -56,6 +56,8 @@
             this.pathBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.exCxcel = new System.Windows.Forms.Button();
+            this.exportlabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
@@ -177,7 +179,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("微軟正黑體", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(110, 490);
+            this.button3.Location = new System.Drawing.Point(110, 476);
             this.button3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(152, 47);
@@ -208,7 +210,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label7.Location = new System.Drawing.Point(272, 508);
+            this.label7.Location = new System.Drawing.Point(272, 494);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 20);
@@ -221,7 +223,7 @@
             this.ManualRadioButton.AutoSize = true;
             this.ManualRadioButton.Checked = true;
             this.ManualRadioButton.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ManualRadioButton.Location = new System.Drawing.Point(50, 616);
+            this.ManualRadioButton.Location = new System.Drawing.Point(50, 597);
             this.ManualRadioButton.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ManualRadioButton.Name = "ManualRadioButton";
             this.ManualRadioButton.Size = new System.Drawing.Size(180, 24);
@@ -236,7 +238,7 @@
             this.AutoRadioButton.AutoSize = true;
             this.AutoRadioButton.Enabled = false;
             this.AutoRadioButton.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AutoRadioButton.Location = new System.Drawing.Point(50, 643);
+            this.AutoRadioButton.Location = new System.Drawing.Point(50, 630);
             this.AutoRadioButton.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.AutoRadioButton.Name = "AutoRadioButton";
             this.AutoRadioButton.Size = new System.Drawing.Size(202, 24);
@@ -250,7 +252,7 @@
             this.step1.AutoSize = true;
             this.step1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.step1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.step1.Location = new System.Drawing.Point(23, 582);
+            this.step1.Location = new System.Drawing.Point(23, 559);
             this.step1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.step1.Name = "step1";
             this.step1.Size = new System.Drawing.Size(209, 24);
@@ -285,7 +287,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("微軟正黑體", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label9.Location = new System.Drawing.Point(24, 450);
+            this.label9.Location = new System.Drawing.Point(24, 436);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(287, 26);
             this.label9.TabIndex = 15;
@@ -354,7 +356,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(353, 640);
+            this.button2.Location = new System.Drawing.Point(353, 618);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(70, 27);
             this.button2.TabIndex = 224;
@@ -366,13 +368,12 @@
             // pathBox
             // 
             this.pathBox.BackColor = System.Drawing.Color.LightGray;
-            this.pathBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pathBox.Enabled = false;
             this.pathBox.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.pathBox.Location = new System.Drawing.Point(353, 613);
+            this.pathBox.Location = new System.Drawing.Point(353, 588);
             this.pathBox.Name = "pathBox";
             this.pathBox.ReadOnly = true;
-            this.pathBox.Size = new System.Drawing.Size(400, 18);
+            this.pathBox.Size = new System.Drawing.Size(400, 25);
             this.pathBox.TabIndex = 226;
             this.pathBox.TabStop = false;
             // 
@@ -381,7 +382,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label14.Location = new System.Drawing.Point(330, 582);
+            this.label14.Location = new System.Drawing.Point(330, 559);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(153, 24);
             this.label14.TabIndex = 227;
@@ -389,19 +390,44 @@
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(5, 556);
+            this.label15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label15.Location = new System.Drawing.Point(5, 539);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(75, 24);
+            this.label15.Size = new System.Drawing.Size(868, 3);
             this.label15.TabIndex = 228;
             this.label15.Text = "label15";
+            // 
+            // exCxcel
+            // 
+            this.exCxcel.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.exCxcel.Location = new System.Drawing.Point(353, 648);
+            this.exCxcel.Name = "exCxcel";
+            this.exCxcel.Size = new System.Drawing.Size(113, 30);
+            this.exCxcel.TabIndex = 229;
+            this.exCxcel.Text = "Export to Excel";
+            this.exCxcel.UseVisualStyleBackColor = true;
+            this.exCxcel.Click += new System.EventHandler(this.exCxcel_Click);
+            // 
+            // exportlabel
+            // 
+            this.exportlabel.AutoSize = true;
+            this.exportlabel.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.exportlabel.ForeColor = System.Drawing.Color.Black;
+            this.exportlabel.Location = new System.Drawing.Point(353, 680);
+            this.exportlabel.Name = "exportlabel";
+            this.exportlabel.Size = new System.Drawing.Size(32, 17);
+            this.exportlabel.TabIndex = 230;
+            this.exportlabel.Text = "Null";
+            this.exportlabel.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(883, 686);
+            this.ClientSize = new System.Drawing.Size(883, 707);
+            this.Controls.Add(this.exportlabel);
+            this.Controls.Add(this.exCxcel);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.pathBox);
@@ -473,6 +499,8 @@
         private System.Windows.Forms.TextBox pathBox;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button exCxcel;
+        private System.Windows.Forms.Label exportlabel;
     }
 }
 

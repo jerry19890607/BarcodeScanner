@@ -8,4 +8,8 @@
     <RootNamespace>ThalesBarcodeScanner</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="NPOI" Version="2.5.1" />
+  </ItemGroup>
+
 </Project>

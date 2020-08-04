@@ -9,7 +9,14 @@ C:\GIT\BarcodeScanner\barcode3\obj\Release\netcoreapp3.1\barcode3.Form1.resource
 C:\GIT\BarcodeScanner\barcode3\obj\Release\netcoreapp3.1\BarcodeCompare.csproj.GenerateResource.cache
 C:\GIT\BarcodeScanner\barcode3\obj\Release\netcoreapp3.1\BarcodeCompare.AssemblyInfoInputs.cache
 C:\GIT\BarcodeScanner\barcode3\obj\Release\netcoreapp3.1\BarcodeCompare.AssemblyInfo.cs
-C:\GIT\BarcodeScanner\barcode3\obj\Release\netcoreapp3.1\BarcodeCompare.csproj.CoreCompileInputs.cache
 C:\GIT\BarcodeScanner\barcode3\obj\Release\netcoreapp3.1\ThalesBarcodeScanner.dll
 C:\GIT\BarcodeScanner\barcode3\obj\Release\netcoreapp3.1\ThalesBarcodeScanner.pdb
 C:\GIT\BarcodeScanner\barcode3\obj\Release\netcoreapp3.1\BarcodeCompare.genruntimeconfig.cache
+C:\GIT\BarcodeScanner\barcode3\bin\Release\netcoreapp3.1\NPOI.OOXML.dll
+C:\GIT\BarcodeScanner\barcode3\bin\Release\netcoreapp3.1\NPOI.OpenXml4Net.dll
+C:\GIT\BarcodeScanner\barcode3\bin\Release\netcoreapp3.1\NPOI.OpenXmlFormats.dll
+C:\GIT\BarcodeScanner\barcode3\bin\Release\netcoreapp3.1\NPOI.dll
+C:\GIT\BarcodeScanner\barcode3\bin\Release\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\GIT\BarcodeScanner\barcode3\bin\Release\netcoreapp3.1\ICSharpCode.SharpZipLib.dll
+C:\GIT\BarcodeScanner\barcode3\obj\Release\netcoreapp3.1\BarcodeCompare.csproj.CoreCompileInputs.cache
+C:\GIT\BarcodeScanner\barcode3\obj\Release\netcoreapp3.1\BarcodeCompare.csproj.CopyComplete

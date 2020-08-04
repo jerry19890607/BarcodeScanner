@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "yDd1rm9XItJjl2TQ8PBe0NiAveCtinjbnR4Pk+mi46v5iKtLkzfA/P+oRZJjGA8C3GFgOof96l1a2olLId96iA==",
+  "dgSpecHash": "S4YHayzDDVCP7wVcLygu+vhN333XB/9LzqhAJkoCQA4tu66kYYwlHKzxSPBF7DrO1t+raIwqTMeSbZEHccEN1g==",
   "success": true,
   "projectFilePath": "C:\\GIT\\BarcodeScanner\\barcode3\\BarcodeCompare.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jerry-I5\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\jerry-I5\\.nuget\\packages\\microsoft.win32.systemevents\\4.5.0\\microsoft.win32.systemevents.4.5.0.nupkg.sha512",
+    "C:\\Users\\jerry-I5\\.nuget\\packages\\npoi\\2.5.1\\npoi.2.5.1.nupkg.sha512",
+    "C:\\Users\\jerry-I5\\.nuget\\packages\\portable.bouncycastle\\1.8.6\\portable.bouncycastle.1.8.6.nupkg.sha512",
+    "C:\\Users\\jerry-I5\\.nuget\\packages\\sharpziplib\\1.2.0\\sharpziplib.1.2.0.nupkg.sha512",
+    "C:\\Users\\jerry-I5\\.nuget\\packages\\system.configuration.configurationmanager\\4.5.0\\system.configuration.configurationmanager.4.5.0.nupkg.sha512",
+    "C:\\Users\\jerry-I5\\.nuget\\packages\\system.drawing.common\\4.5.0\\system.drawing.common.4.5.0.nupkg.sha512",
+    "C:\\Users\\jerry-I5\\.nuget\\packages\\system.security.accesscontrol\\4.5.0\\system.security.accesscontrol.4.5.0.nupkg.sha512",
+    "C:\\Users\\jerry-I5\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.5.0\\system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
+    "C:\\Users\\jerry-I5\\.nuget\\packages\\system.security.permissions\\4.5.0\\system.security.permissions.4.5.0.nupkg.sha512",
+    "C:\\Users\\jerry-I5\\.nuget\\packages\\system.security.principal.windows\\4.5.0\\system.security.principal.windows.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }
