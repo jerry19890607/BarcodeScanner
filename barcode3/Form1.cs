@@ -37,8 +37,8 @@ namespace barcode3
             }
             else {
                 DateTimeOffset now = (DateTimeOffset)DateTime.UtcNow;
-                string a = textBox2.Text.Replace(" ", "");
-                string b = textBox3.Text.Replace(" ", "");
+                string a = input1.Text.Replace(" ", "");
+                string b = input2.Text.Replace(" ", "");
 
                 label11.Visible = false;
                 label12.Visible = false;
@@ -71,7 +71,7 @@ namespace barcode3
                     //Pass the filepath and filename to the StreamWriter Constructor
                     StreamWriter sw = new StreamWriter(logFilePath);
                     //Write a line of text
-                    sw.WriteLine(line + now.ToLocalTime().ToString() + ";" + textBox1.Text + ";" + comboBox1.Text.Replace(" ", "") + ";" + textBox2.Text + ";" + textBox3.Text + ";" + label1.Text);
+                    sw.WriteLine(line + now.ToLocalTime().ToString() + ";" + textBox1.Text + ";" + comboBox1.Text.Replace(" ", "") + ";" + input1.Text + ";" + input2.Text + ";" + label1.Text);
                     //Close the file
                     sw.Close();
                 }
@@ -89,25 +89,25 @@ namespace barcode3
                 if (AutoRadioButton.Checked == true)
                 {
                     textBox1.Enabled = true;
-                    textBox2.Enabled = true;
+                    input1.Enabled = true;
                     textBox1.ReadOnly = false;
-                    textBox2.ReadOnly = false;
-                    textBox2.Clear();
-                    textBox3.Clear();
-                    textBox2.Focus();
+                    input1.ReadOnly = false;
+                    input1.Clear();
+                    input2.Clear();
+                    input1.Focus();
                     label7.Visible = false;
                 }
                 else if (ManualRadioButton.Checked == true) {
                     textBox1.ReadOnly = true;
-                    textBox2.ReadOnly = true;
-                    textBox2.Enabled = false;
+                    input1.ReadOnly = true;
+                    input1.Enabled = false;
                     textBox1.Enabled = false;
                     comboBox1.Enabled = false;
                     this.ActiveControl = button3;
                     //button3.Focus();
                 }
-                textBox3.ReadOnly = false;
-                textBox3.Enabled = false;
+                input2.ReadOnly = false;
+                input2.Enabled = false;
             }
 
         }
@@ -123,8 +123,9 @@ namespace barcode3
 
             if  ( (e.KeyValue == (char)Keys.Return) || (e.KeyValue == (char)Keys.Enter) )
             {
-                if ( !String.IsNullOrEmpty(textBox2.Text) && !String.IsNullOrEmpty(textBox3.Text) )
+                if ( !String.IsNullOrEmpty(input1.Text) && !String.IsNullOrEmpty(input2.Text) )
                 {
+                    label11.Visible = false;
                     button1_Click(null, null);
                 }
             }
@@ -132,19 +133,19 @@ namespace barcode3
 
         private void button3_Click(object sender, EventArgs e)
         {
-            textBox2.Enabled = true;
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox2.Focus();
+            input1.Enabled = true;
+            input1.Clear();
+            input2.Clear();
+            input1.Focus();
             textBox1.ReadOnly = false;
-            textBox2.ReadOnly = false;
-            textBox3.ReadOnly = false;
+            input1.ReadOnly = false;
+            input2.ReadOnly = false;
             label7.Visible = false;
             label1.Text = "";
             BackColor = Color.LightGray;
             textBox1.Enabled = true;
             comboBox1.Enabled = true;
-            textBox3.Enabled = false;
+            input2.Enabled = false;
             label13.Visible = false;
         }
 
@@ -152,8 +153,8 @@ namespace barcode3
         {
             if (e.KeyValue == (char)Keys.Enter)
             {
-                textBox2.Focus();
-                textBox2.ReadOnly = false;
+                input1.Focus();
+                input1.ReadOnly = false;
             }
         }
 
@@ -174,18 +175,18 @@ namespace barcode3
         {
             if (AutoRadioButton.Checked == true)
             {
-                textBox2.ReadOnly = false;
-                textBox3.ReadOnly = false;
+                input1.ReadOnly = false;
+                input2.ReadOnly = false;
             }
         }
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
-            textBox2.Focus();
-            textBox2.ReadOnly = false;
-            textBox2.Enabled = true;
+            input1.Focus();
+            input1.ReadOnly = false;
+            input1.Enabled = true;
 
-            if (!String.IsNullOrEmpty(textBox1.Text) && !String.IsNullOrEmpty(textBox2.Text) && !String.IsNullOrEmpty(textBox3.Text))
+            if (!String.IsNullOrEmpty(textBox1.Text) && !String.IsNullOrEmpty(input1.Text) && !String.IsNullOrEmpty(input2.Text))
             {
                 button1_Click(null, null);
             }
@@ -195,19 +196,20 @@ namespace barcode3
         {
             if ((e.KeyChar == (char)Keys.Return))
             {
-                if (string.IsNullOrWhiteSpace(textBox2.Text))
+                if (string.IsNullOrWhiteSpace(input1.Text))
                 {
                     label13.Visible = true;
                     label13.Text = "Input 1 can't be empty!";
+                    input1.Clear();
                 }
                 else
                 {
                     label13.Visible = false;
-                    textBox3.Enabled = true;
-                    textBox3.ReadOnly = false;
-                    textBox3.Focus();
-                    textBox2.ReadOnly = true;
-                    textBox2.Enabled = false;
+                    input2.Enabled = true;
+                    input2.ReadOnly = false;
+                    input2.Focus();
+                    input1.ReadOnly = true;
+                    input1.Enabled = false;
                 }
             }
         }
@@ -216,25 +218,26 @@ namespace barcode3
         {
             if (e.KeyChar == (char)Keys.Return)
             {
-                if (string.IsNullOrWhiteSpace(textBox3.Text))
+                if (string.IsNullOrWhiteSpace(input2.Text))
                 {
                     label5.Visible = true;
                     label5.Text = "Input 2 can't be empty!";
+                    input2.Clear();
                 }
                 else
                 {
                     label5.Text = "";
-                    if (textBox2.Text == textBox3.Text)
+                    if (input1.Text == input2.Text)
                     {
                         label5.Visible = true;
                         label5.Text = "Input 2 Error, Duplicate!";
-                        textBox3.Clear();
+                        input2.Clear();
                     }
                     else
                     {
                         button1_Click(null, null);
-                        textBox2.Focus();
-                        textBox3.ReadOnly = true;
+                        input1.Focus();
+                        input2.ReadOnly = true;
                         label5.Text = "";
                     }
                 }
