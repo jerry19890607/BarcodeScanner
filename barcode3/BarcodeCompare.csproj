@@ -6,6 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
     <AssemblyName>ThalesBarcodeScanner</AssemblyName>
     <RootNamespace>ThalesBarcodeScanner</RootNamespace>
+    <Win32Resource></Win32Resource>
+    <ApplicationIcon>azfp2-kmoci-001.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>

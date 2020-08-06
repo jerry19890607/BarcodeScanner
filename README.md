@@ -2,8 +2,9 @@
  - It's the utility designed to scanning the 2D barcode and compare the sting whether the same or not.
 
 ## Binary path
- - barcode3/bin/Release/netcoreapp3.1/
+ - Under ./Bin/
  - (If needs move the bin file, please move whole directory)
+ - Edit "DefaultPath.conf" to change the default log file
 
 ## Pre-processing
  - Need Windows .NET framework 3.1 installed
@@ -16,6 +17,11 @@
  - Export txt log to Excel format, lick export button, it will separate by comma (Default D:\\BarcodeLogFile.txt)
 
 ## Release
+    - v1.0.3
+        1. Edit default patch conf to change the default log file
+        2. Add programe icon
+        3. Publish version in one file in Bin
+
     - v1.0.2
         1. Clear text box if input is empty
         2. Implement txt export to Excel feature

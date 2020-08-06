@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.input1 = new System.Windows.Forms.TextBox();
             this.input2 = new System.Windows.Forms.TextBox();
@@ -58,6 +59,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.exCxcel = new System.Windows.Forms.Button();
             this.exportlabel = new System.Windows.Forms.Label();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.SuspendLayout();
             // 
             // textBox1
@@ -223,7 +225,7 @@
             this.ManualRadioButton.AutoSize = true;
             this.ManualRadioButton.Checked = true;
             this.ManualRadioButton.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ManualRadioButton.Location = new System.Drawing.Point(50, 597);
+            this.ManualRadioButton.Location = new System.Drawing.Point(50, 593);
             this.ManualRadioButton.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ManualRadioButton.Name = "ManualRadioButton";
             this.ManualRadioButton.Size = new System.Drawing.Size(180, 24);
@@ -252,12 +254,12 @@
             this.step1.AutoSize = true;
             this.step1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.step1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.step1.Location = new System.Drawing.Point(23, 559);
+            this.step1.Location = new System.Drawing.Point(42, 551);
             this.step1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.step1.Name = "step1";
-            this.step1.Size = new System.Drawing.Size(209, 24);
+            this.step1.Size = new System.Drawing.Size(190, 24);
             this.step1.TabIndex = 12;
-            this.step1.Text = " * Comparison mode :";
+            this.step1.Text = "Comparison mode :";
             // 
             // step2
             // 
@@ -356,7 +358,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(353, 618);
+            this.button2.Location = new System.Drawing.Point(353, 616);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(70, 27);
             this.button2.TabIndex = 224;
@@ -367,12 +369,11 @@
             // 
             // pathBox
             // 
-            this.pathBox.BackColor = System.Drawing.Color.LightGray;
+            this.pathBox.BackColor = System.Drawing.Color.White;
             this.pathBox.Enabled = false;
             this.pathBox.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.pathBox.Location = new System.Drawing.Point(353, 588);
+            this.pathBox.Location = new System.Drawing.Point(353, 584);
             this.pathBox.Name = "pathBox";
-            this.pathBox.ReadOnly = true;
             this.pathBox.Size = new System.Drawing.Size(400, 25);
             this.pathBox.TabIndex = 226;
             this.pathBox.TabStop = false;
@@ -382,16 +383,16 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label14.Location = new System.Drawing.Point(330, 559);
+            this.label14.Location = new System.Drawing.Point(340, 550);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(153, 24);
+            this.label14.Size = new System.Drawing.Size(134, 24);
             this.label14.TabIndex = 227;
-            this.label14.Text = " * Log file path :";
+            this.label14.Text = "Log file path :";
             // 
             // label15
             // 
             this.label15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label15.Location = new System.Drawing.Point(5, 539);
+            this.label15.Location = new System.Drawing.Point(5, 533);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(868, 3);
             this.label15.TabIndex = 228;
@@ -402,7 +403,7 @@
             this.exCxcel.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.exCxcel.Location = new System.Drawing.Point(353, 648);
             this.exCxcel.Name = "exCxcel";
-            this.exCxcel.Size = new System.Drawing.Size(113, 30);
+            this.exCxcel.Size = new System.Drawing.Size(103, 30);
             this.exCxcel.TabIndex = 229;
             this.exCxcel.Text = "Export to Excel";
             this.exCxcel.UseVisualStyleBackColor = true;
@@ -458,9 +459,10 @@
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Form1";
-            this.Text = "THALES Barcode Compare Utility v1.0.2";
+            this.Text = "THALES Barcode Compare Utility v1.0.3";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_Shown);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
@@ -501,6 +503,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button exCxcel;
         private System.Windows.Forms.Label exportlabel;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }
 

@@ -16,7 +16,7 @@ namespace barcode3
 {
     public partial class Form1 : Form
     {
-        string logFilePath = "D:\\BarcodeLogFile.txt";
+        string logFilePath = "C:\\barcodeLog\\BarcodeLogFile.txt";
 
         public Form1()
         {
@@ -26,7 +26,26 @@ namespace barcode3
         private void Form1_Shown(object sender, EventArgs e)
         {
             textBox1.Focus();
-            pathBox.Text = logFilePath;
+
+            String defaultPath;
+            /*  Load default log patch form DefaultPath.conf  */
+            if (File.Exists(".\\DefaultPath.conf"))
+            {
+                StreamReader sr = new StreamReader(".\\DefaultPath.conf");
+                defaultPath = sr.ReadLine();
+                sr.Close();
+
+                if (String.IsNullOrEmpty(defaultPath))
+                {
+                    pathBox.Text = logFilePath;
+                } 
+                else {
+                    pathBox.Text = defaultPath;
+                }
+            }
+            else {
+                pathBox.Text = logFilePath;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -58,13 +77,20 @@ namespace barcode3
                 }
 
                 logFilePath = pathBox.Text;
-                /*
-                bool exists = System.IO.Directory.Exists(logFilePath);
-
+                string dirPath = logFilePath.Substring( 0, logFilePath.LastIndexOf("\\"));
+                bool exists = System.IO.Directory.Exists(dirPath);
                 if (!exists)
                 {
-                    System.IO.Directory.CreateDirectory(logFilePath);
-                }*/
+                    try
+                    {
+                        System.IO.Directory.CreateDirectory(dirPath);
+                    }
+                    catch (Exception error)
+                    {
+                        label7.Visible = true;
+                        label7.Text = "Exception: " + error.Message;
+                    }
+                }
 
                 if (!File.Exists(logFilePath))
                 {
@@ -91,11 +117,6 @@ namespace barcode3
                     label7.Visible = true;
                     label7.Text = "Exception: " + error.Message;
                 }
-                finally
-                {
-                    //label7.Visible = true;
-                    //label7.Text = "Executing finally block.";
-                }
 
                 if (AutoRadioButton.Checked == true)
                 {
@@ -115,12 +136,10 @@ namespace barcode3
                     textBox1.Enabled = false;
                     comboBox1.Enabled = false;
                     this.ActiveControl = button3;
-                    //button3.Focus();
                 }
                 input2.ReadOnly = false;
                 input2.Enabled = false;
             }
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -131,7 +150,6 @@ namespace barcode3
 
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
         {
-
             if  ( (e.KeyValue == (char)Keys.Return) || (e.KeyValue == (char)Keys.Enter) )
             {
                 if ( !String.IsNullOrEmpty(input1.Text) && !String.IsNullOrEmpty(input2.Text) )
@@ -258,7 +276,7 @@ namespace barcode3
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
+        {            
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Title = "Select log file";
             dialog.InitialDirectory = "C:\\";
