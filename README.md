@@ -1,13 +1,8 @@
 # Barcode Scanner
  - It's the utility designed to scanning the 2D barcode and compare the sting whether the same or not.
 
-## Binary path
- - Under ./Bin/
- - (If needs move the bin file, please move whole directory)
- - Edit "DefaultPath.conf" to change the default log file
-
-## Pre-processing
- - Need Windows .NET framework 3.1 installed
+## Configuration
+ - Edit "DefaultPath.conf" to change the default log file (If conf not exist, will settting default path to C:\\barcodeLog\BarcodeLogFile.txt)
 
 ## Usage
  - Fill out your name or operator name
